@@ -42,10 +42,30 @@ class Airplane {
           + It should return a string with `name` and `age`. Example: "Mary, 50"
   */
   
- class Person {
-    
+  class Person {
+    constructor(name,age){
+      this.name=name;
+      this.age=age;
+      this.stomach=[];
+    }
+    eat(food){
+      if(this.stomach.length<10){
+        this.stomach.push(food);
+      }else{
+        console.log(`${this.name} is full.`)
+      }
+    }
+    poop(){
+      this.stomach=[];
+    }
+    toString(){
+      return `${this.name}, ${this.age}`;
+    }
   }
+  let ben=new Person("Ben",29);
+  console.log(ben);
   
+
   /*
     TASK 2
       - Write a Car class whose constructor initializes `model` and `milesPerGallon` from arguments.
@@ -60,7 +80,7 @@ class Airplane {
           + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
   */
   
- class Car {
+  class Car {
     
   }
   
@@ -76,7 +96,7 @@ class Airplane {
           + Speaking should return a phrase `Hello my name is {name}, I am from {location}`.
           + {name} and {location} of course come from the instance's own properties.
   */
- class Lambdasian {
+  class Lambdasian {
     
   }
   
@@ -94,7 +114,7 @@ class Airplane {
           + `demo` receives a `subject` string as an argument and returns the phrase 'Today we are learning about {subject}' where subject is the param passed in.
           + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
   */
- class Instructor {
+  class Instructor {
 
  }
   /*
